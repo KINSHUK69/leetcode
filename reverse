@@ -8,7 +8,7 @@ cin>>num;
 while(num>=0)
 {
 div=num%10;
-rev=div*10;
+rev+=div*10;
 num=num/10;
 }
 cout<<"reverse of the number="<<rev;
