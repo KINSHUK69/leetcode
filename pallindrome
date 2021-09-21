@@ -1,20 +1,22 @@
-#include<iostream>
-using namespace std;
-int main()
-{
-int i,rev,num,div,n;
-cout<<"enter the number : \n";
-cin>>n;
-num=n;
-while(n>=0){
-div=n%10;
-rev=rev+div*10;
-n=n/10;
-}
-if(rev==num)
-cout<<"pallindrome\n";
-else
-cout<<"not a pallindrome\n";
-return 0;
+class Solution {
+public:
+    int reverse(int x) {
+        
+    
+        long a = x;        
 
-}
+        string s = to_string(a);
+        if (a < 0)
+            s.push_back('-');
+        std::reverse(s.begin(), s.end());     
+
+        long y = stoll(s);
+        if (y > INT32_MAX || y < INT32_MIN)
+        return 0;
+        
+        return y;
+        
+    
+        
+    }
+};
