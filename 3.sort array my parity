@@ -1,15 +1,18 @@
 class Solution {
 public:
     vector<int> sortArrayByParity(vector<int>& nums) {
-        vector<int sort>sort;
-        for(auto i=nums.begin();i!=nums.end();++i){
-            if (i%2==0){
-                sort=sort.insert(sort.begins(),i);                
+         
+        int j=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            if(nums[i]%2==0)
+            {
+                swap(nums[i],nums[j]);
+                j++;
             }
-            else
-                sort=sort.insert(sort.end(),i);                
         }
-        return sort;
-        
+        return nums;
+    
+       
     }
 };
