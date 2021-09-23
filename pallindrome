@@ -1,6 +1,14 @@
 class Solution {
 public:
-    int reverse(int x) {
+    bool isPalindrome(int x) {
+        int a=reverse(x);
+        if (a==x)
+            return 1;
+        else
+            return 0;
+        
+    }
+     int reverse(int x) {
         
     
         long a = x;        
@@ -11,11 +19,7 @@ public:
         std::reverse(s.begin(), s.end());     
 
         long y = stoll(s);
-        if (y > INT32_MAX || y < INT32_MIN)
-        return 0;
-        
-        return y;
-        
+        return y;        
     
         
     }
