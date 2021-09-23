@@ -1,11 +1,12 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        int a=reverse(x);
-        if (a==x)
-            return 1;
-        else
+        int a=reverse(x);               
+        
+        if (a!=x || a<0)
             return 0;
+        else
+            return 1;
         
     }
      int reverse(int x) {
